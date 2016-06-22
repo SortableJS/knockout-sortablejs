@@ -1,4 +1,9 @@
-# knockout-sortablejs
+# THIS PROJECT NEEDS A MAINTAINER.
+
+---
+
+knockout-sortablejs
+-------------------
 A Knockout.js binding to [SortableJS](https://github.com/RubaXa/Sortable/).
 
 Demo: http://rubaxa.github.io/Sortable/
