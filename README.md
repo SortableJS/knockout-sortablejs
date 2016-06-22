@@ -24,3 +24,8 @@ The sortable/draggable bindingHandlers supports the same syntax as Knockouts bui
  * options: an object that contains settings for the underlaying sortable, ie `group`,`handle`, events etc.
  * collection: if your `foreach` array is a computed then you would supply the underlaying observableArray that you would like to sort here.
  * manuallyHandleUpdateEvents: a boolean to turn off the change events on update that other polymer elements listen to.
+
+
+### NPM
+
+ `npm install knockout-sortablejs`
