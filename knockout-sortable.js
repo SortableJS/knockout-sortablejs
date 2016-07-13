@@ -138,7 +138,7 @@
                 // drop an item above the 3rd visible item, but the 2nd visible item
                 // has an actual index of 5.
                 if (e.item.previousElementSibling) {
-                    newIndex = to().indexOf(ko.dataFor(e.item.previousElementSibling)) + 1;
+                    newIndex = to().indexOf(ko.dataFor(e.item.previousElementSibling)) + (newIndex > originalIndex ? 0 : 1);
                 }
 
                 // Remove sortables "unbound" element
