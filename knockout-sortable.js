@@ -95,6 +95,13 @@
         // There seems to be some problems with updating the options of a sortable
         // Tested to change eventhandlers and the group options without any luck
 
+        var options = buildOptions(valueAccessor, sortableOptions);
+        var sortableElement = bindingContext.$data.SortableElement;
+
+        for (var prop in options) {
+            sortableElement.option(prop, options[prop]);
+        }
+	    
         return ko.bindingHandlers.template.update(element, valueAccessor, allBindings, viewModel, bindingContext);
     },
     eventHandlers = (function (handlers) {
