@@ -33,7 +33,10 @@ The sortable/draggable bindingHandlers supports the same syntax as Knockouts bui
 
 ### NPM
 
- `npm install knockout-sortablejs`
+```
+ npm install sortablejs
+ npm install knockout-sortablejs
+ ```
 
 #### Using with modules:
 ```
