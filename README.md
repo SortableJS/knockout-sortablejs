@@ -37,6 +37,5 @@ The sortable/draggable bindingHandlers supports the same syntax as Knockouts bui
 
 #### Using with modules:
 ```
-import Sortable from "sortablejs";
 import "knockout-sortablejs";
 ```
