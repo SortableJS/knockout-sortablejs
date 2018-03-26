@@ -30,7 +30,7 @@
 	else if (typeof define === 'function' && define.amd) {
 		//we may have a reference to only 1, or none
 		if (koRef !== undefined && sortableRef === undefined) {
-			define(['./Sortable'], function (amdSortableRef) {
+			define(['sortablejs'], function (amdSortableRef) {
 				factory(koRef, amdSortableRef);
 			});
 		}
@@ -40,7 +40,7 @@
 			});
 		}
 		else if (koRef === undefined && sortableRef === undefined) {
-			define(['knockout', './Sortable'], factory);
+			define(['knockout', 'sortablejs'], factory);
 		}
 	}
 	//no more routes to get references
