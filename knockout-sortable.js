@@ -119,6 +119,8 @@
                     var removeOperation = currentOperation.event.type === 'remove' ? currentOperation : existingOperation,
                         addOperation = currentOperation.event.type === 'add' ? currentOperation : existingOperation;
 
+                    addOperation.event.groupOption = parentBindings.sortable.options.group;
+
                     moveItem(itemVM, removeOperation.collection, addOperation.collection, addOperation.event.clone, addOperation.event);
                 }
             },
@@ -151,7 +153,13 @@
                 fromArray.splice(originalIndex, 1);
                 // Update the array, this will also remove sortables "unbound" clone
                 from.valueHasMutated();
-                if (clone && from !== to) {
+
+                var groupOption = e.groupOption;
+                // See the option at https://github.com/SortableJS/Sortable#options
+                // group: { name: 'shared', pull: 'clone' }
+                var cloneable = typeof groupOption === 'object' && groupOption.pull === 'clone';
+
+                if (cloneable && clone && from !== to) {
                     // Read the item
                     fromArray.splice(originalIndex, 0, itemVM);
                     // Force knockout to update
